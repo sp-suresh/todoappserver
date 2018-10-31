@@ -15,13 +15,13 @@ todoDb.connect(mongo, () => {
   
   router.use('/todo', require('./controllers/todo'))
   // Temp user login
-  app.use(function(req, res, next){
+  function tempUserLogin(req, res, next){
     req.user = {idx: 1}
     next()
-  })
+  }
 
   app.use(bodyParser)
-  app.use('/api', router)
+  app.use('/api', tempUserLogin, router)
   app.use(function(req, res, next){
     notFound(res)
   });

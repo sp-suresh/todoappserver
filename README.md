@@ -12,7 +12,7 @@
 # API Documentation
 
 1. Get todo bucket types
-`
+```
 Url: /api/todo/buckets
 Methos: GET
 Response:
@@ -30,20 +30,20 @@ Response:
   "nm": "Blue"
   }
 ]
-`
+```
 
 2. Add a new Todo
 
-`
+```
 Url: /api/todo
 Method: POST
 Response:
 {msg: 'Todo added successfully'}
-`
+```
 
 3. Get Todos
 
-`
+```
 Url: /api/todo/?bucketId=3&lmt=2&off=1
 Method: GET
 Response:
@@ -66,4 +66,4 @@ Response:
     }
   ]
 }
-`
+```

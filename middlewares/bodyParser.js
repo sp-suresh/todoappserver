@@ -1,6 +1,7 @@
 var {serverError} = require('./basicResHandler');
 
 function bodyParser(req, res, next) {
+  logger.debug('req.user', req.user)
   if(req.method === "GET") {
     next();
     return;
