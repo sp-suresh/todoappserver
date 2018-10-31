@@ -1,0 +1,16 @@
+{
+  "name": "todoappserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Suresh Prajapati",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemongoclient": "git+https://github.com/sp-suresh/nodemongoclient.git",
+    "nodewinstonlogger": "git+https://github.com/sp-suresh/nodewinstonlogger.git"
+  }
+}
