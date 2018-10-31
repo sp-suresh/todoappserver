@@ -37,6 +37,12 @@ Response:
 ```
 Url: /api/todo
 Method: POST
+Request Body:
+{
+  "desc": "Four todo desc",
+  "title": "Four",
+  "bucketId": 3
+}
 Response:
 {msg: 'Todo added successfully'}
 ```
