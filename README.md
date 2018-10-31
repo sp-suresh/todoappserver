@@ -14,7 +14,7 @@
 1. Get todo bucket types
 ```
 Url: /api/todo/buckets
-Methos: GET
+Method: GET
 Response:
 [
   {
