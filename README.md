@@ -5,9 +5,10 @@
 
 1. Clone this repo
 2. `$ cd ./todoappserver`
-3. `$ npm install`
-4. To start/restart use `$ pm2 restart ./ecosystem.config.js --env development --update-env`
-5. Monitor the logs using `$ pm2 logs 'Todo APP Server'`
+3. Before we can start using app server, we need to create some master data in `mongodb`. Please run `mongo < ./scripts/mongoMasterDataSetup.js`.
+4. `$ npm install`
+5. To start/restart use `$ pm2 restart ./ecosystem.config.js --env development --update-env`
+6. Monitor the logs using `$ pm2 logs 'Todo APP Server'`
 
 # API Documentation
 

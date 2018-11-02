@@ -20,11 +20,19 @@ todoDb.connect(mongo, () => {
     next()
   }
 
+  function allowCors(req, res, next){
+    res.header("Access-Control-Allow-Origin", req.header('Origin'))
+    res.header("Access-Control-Allow-Headers", "Cache-Control, Pragma, Origin, Authorization, Content-Type, X-Requested-With")
+    res.header("Access-Control-Allow-Methods", "GET, PUT, POST")
+    res.header('Access-Control-Allow-Credentials', true)
+    return next()
+  }
+
   app.use(bodyParser)
-  app.use('/api', tempUserLogin, router)
+  app.use('/api', allowCors, tempUserLogin, router)
   app.use(function(req, res, next){
     notFound(res)
-  });
+  })
 
   app.listen(PORT, (e) => {
     if(e){
